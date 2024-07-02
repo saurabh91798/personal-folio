@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -5,8 +6,19 @@ import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import DownloadCV from "@/components/ui/DownloadCV";
+
+const downloadCV = () => {
+  const link = document.createElement('a');
+  link.href = '/public/assets/resume/Saurabh-resume.pdf'; // Replace with the actual path to your CV file
+  link.download = 'Your_CV.pdf'; // Replace with the desired file name
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 const Home = () => {
+
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -26,14 +38,7 @@ const Home = () => {
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row gap-8 items-center">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <DownloadCV />
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"

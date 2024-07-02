@@ -41,7 +41,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ad obcaecati, vitae consectetur a error libero corporis iste. Ipsa praesentium, a quo quia animi cumque!",
+    "In total i have 5+ years of experience in Support role, aside from this i have been studying to become a web developer.",
   items: [
     {
       company: "Operative Media",
